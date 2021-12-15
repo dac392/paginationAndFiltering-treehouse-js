@@ -23,9 +23,7 @@ function search(e){
       msg.className = "no-results"
       studentList.innerHTML = "";
       studentList.append(msg);
-      e.target.value = "";
-      // showPage(data,1);
-      addPagination(filter_list);
+      page_list.innerHTML = "";
    }else{
       showPage(filter_list,1);
       addPagination(filter_list);

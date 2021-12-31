@@ -57,12 +57,15 @@ function insertSearch(){
 
 //listener function
 function nextPage(e){
-   const active = document.querySelector('.active');
-   active.className = "";
+   if(e.target.tagName === "BUTTON"){
+      const active = document.querySelector('.active');
+      active.className = "";
+   
+      const btn = e.target;
+      btn.className = "active";
+      showPage(data, btn.textContent);
+   }
 
-   const btn = e.target;
-   btn.className = "active";
-   showPage(data, btn.textContent);
 }
 
 //shows the currently active page
